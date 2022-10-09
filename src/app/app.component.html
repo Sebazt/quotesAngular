@@ -1,7 +1,12 @@
-<div class="card text-center">
-  <div class="card-body" *ngFor="let quito of quotes">
-    <div class="card-header">Quotes</div>
-    <h3>{{ quito.quote }}</h3>
-    <h6>{{ quito.author }}</h6>
+<main class="main"[style.background-color]="currentColour">
+  <img src="https://64.media.tumblr.com/4cb7e9fd040b6c5a2468212fe0d9e220/tumblr_ngllatQNeN1tqptlzo1_500.gif" alt="Charmander" class="imagen">
+  <div class="card text-center" [style.background-color]="currentColour">
+    <div class="card-body">
+      <h3 [style.color]="currentColour">""{{ currentQuote?.quote }}</h3>
+      <h6 [style.color]="currentColour">{{ currentQuote?.author }}</h6>
+      <button class="btn btn-primary" (click)="changeColour()"[style.background-color]="currentColour">Click me</button>
+    </div>
   </div>
-</div>
+</main>
+<!-- <pre>{{quotes | json}}</pre> -->
+
